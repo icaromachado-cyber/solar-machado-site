@@ -29,7 +29,6 @@ import {
 import './App.css'
 
 import logoImg from './assets/images/logo_header.png'
-import logoFooter from './assets/images/logo_footer.png'
 import instalacao1 from './assets/images/instalacao_nova_1.jpg'
 import instalacao2 from './assets/images/instalacao_nova_2.jpg'
 import instalacao3 from './assets/images/instalacao_nova_3.jpg'
@@ -534,7 +533,7 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <img src={logoFooter} alt="Solar Machado" className="h-24 w-auto mb-4" />
+              <img src={logoImg} alt="Solar Machado" className="h-16 w-auto mb-4 brightness-0 invert" />
               <p className="text-gray-400">Especialistas em energia solar fotovoltaica, oferecendo soluções completas para residências e empresas em todo o Piauí.</p>
             </div>
             <div>
