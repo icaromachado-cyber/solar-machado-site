@@ -16,7 +16,8 @@ import {
   Users,
   Award,
   Leaf,
-  MessageCircle
+  MessageCircle,
+  Instagram
 } from 'lucide-react'
 import './App.css'
 
@@ -87,10 +88,15 @@ function App() {
               <Zap className="w-5 h-5 mr-2" />
               Solicitar Orçamento
             </Button>
-            <Button size="lg" className="bg-[#25D366] hover:bg-[#1DA851] text-white" 
-                    onClick={() => window.open('https://wa.me/5586994688482', '_blank')}> 
-              <MessageCircle className="w-5 h-5 mr-2" /> 
+            <Button size="lg" className="bg-[#25D366] hover:bg-[#1DA851] text-white"
+                    onClick={() => window.open('https://wa.me/5586994688482', '_blank')}>
+              <MessageCircle className="w-5 h-5 mr-2" />
               WhatsApp
+            </Button>
+            <Button size="lg" className="bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-90 text-white"
+                    onClick={() => window.open('https://www.instagram.com/solarmachadoeng', '_blank')}>
+              <Instagram className="w-5 h-5 mr-2" />
+              Instagram
             </Button>
           </div>
         </div>
@@ -561,6 +567,16 @@ function App() {
                 <p>(86) 99468-8482</p>
                 <p>solarmachadoeng@gmail.com</p>
                 <p>Teresina - PI</p>
+                <div className="flex items-center gap-4 mt-4">
+                  <a href="https://wa.me/5586994688482" target="_blank" rel="noopener noreferrer"
+                     className="text-[#25D366] hover:opacity-80 transition-opacity">
+                    <MessageCircle className="w-6 h-6" />
+                  </a>
+                  <a href="https://www.instagram.com/solarmachadoeng" target="_blank" rel="noopener noreferrer"
+                     className="text-pink-400 hover:opacity-80 transition-opacity">
+                    <Instagram className="w-6 h-6" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
