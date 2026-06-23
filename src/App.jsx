@@ -72,7 +72,7 @@ function App() {
       {/* Header */}
       <header className="bg-white shadow-sm border-b sticky top-0 z-40">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <img src={logoImg} alt="Solar Machado" className="h-16 w-auto" />
+          <img src={logoImg} alt="Solar Machado" className="h-28 w-auto" />
 
           {/* Nav desktop */}
           <nav className="hidden md:flex items-center space-x-8">
