@@ -72,7 +72,7 @@ function App() {
       {/* Header */}
       <header className="bg-white shadow-sm border-b sticky top-0 z-40">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <img src={logoImg} alt="Solar Machado" className="h-16 w-auto" />
+          <img src={logoImg} alt="Solar Machado" className="h-24 w-auto" />
 
           {/* Nav desktop */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -158,7 +158,7 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img src={instalacao1} alt="Instalação de painéis solares" className="rounded-lg shadow-lg w-full h-96 object-cover mb-4" />
-              <img src={logoImg} alt="Solar Machado Logo" className="h-20 w-auto mx-auto" />
+              <img src={logoImg} alt="Solar Machado Logo" className="h-32 w-auto mx-auto" />
             </div>
             <div>
               <div className="grid grid-cols-2 gap-6 mb-8">
@@ -533,7 +533,7 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <img src={logoImg} alt="Solar Machado" className="h-16 w-auto mb-4 brightness-0 invert" />
+              <img src={logoImg} alt="Solar Machado" className="h-28 w-auto mb-4 brightness-0 invert" />
               <p className="text-gray-400">Especialistas em energia solar fotovoltaica, oferecendo soluções completas para residências e empresas em todo o Piauí.</p>
             </div>
             <div>
