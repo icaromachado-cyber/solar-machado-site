@@ -28,7 +28,8 @@ import {
 } from 'lucide-react'
 import './App.css'
 
-import logoImg from './assets/images/logo.png'
+import logoImg from './assets/images/logo_header.png'
+import logoFooter from './assets/images/logo_footer.png'
 import instalacao1 from './assets/images/instalacao_nova_1.jpg'
 import instalacao2 from './assets/images/instalacao_nova_2.jpg'
 import instalacao3 from './assets/images/instalacao_nova_3.jpg'
@@ -158,7 +159,7 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img src={instalacao1} alt="Instalação de painéis solares" className="rounded-lg shadow-lg w-full h-96 object-cover mb-4" />
-              <img src={logoImg} alt="Solar Machado Logo" className="h-24 w-auto mx-auto" />
+              <img src={logoImg} alt="Solar Machado Logo" className="h-20 w-auto mx-auto" />
             </div>
             <div>
               <div className="grid grid-cols-2 gap-6 mb-8">
@@ -533,7 +534,7 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <img src={logoImg} alt="Solar Machado" className="h-24 w-auto mb-4 brightness-0 invert" />
+              <img src={logoFooter} alt="Solar Machado" className="h-24 w-auto mb-4" />
               <p className="text-gray-400">Especialistas em energia solar fotovoltaica, oferecendo soluções completas para residências e empresas em todo o Piauí.</p>
             </div>
             <div>
