@@ -39,37 +39,15 @@ function App() {
     phone: '',
     message: ''
   });
-  const [formStatus, setFormStatus] = useState({ success: null, message: '' });
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setFormStatus({ success: null, message: 'Enviando...' });
-
-    try {
-      const response = await fetch('/api/send_email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setFormStatus({ success: true, message: data.message });
-        setFormData({ name: '', email: '', phone: '', message: '' }); // Limpa o formulário
-      } else {
-        setFormStatus({ success: false, message: data.message || 'Erro ao enviar e-mail.' });
-      }
-    } catch (error) {
-      console.error('Erro ao enviar formulário:', error);
-      setFormStatus({ success: false, message: 'Erro de conexão. Tente novamente mais tarde.' });
-    }
+    const text = `Olá, Solar Machado! Gostaria de solicitar um orçamento.%0A%0A*Nome:* ${formData.name}%0A*E-mail:* ${formData.email}%0A*Telefone:* ${formData.phone}%0A*Mensagem:* ${formData.message}`;
+    window.open(`https://wa.me/5586994688482?text=${text}`, '_blank');
+    setFormData({ name: '', email: '', phone: '', message: '' });
   };
 
   return (
@@ -546,13 +524,9 @@ function App() {
                       onChange={handleChange}
                     />
                     <Button type="submit" className="w-full bg-[#fdc300] hover:bg-[#e2a800] text-black font-semibold">
-                      Enviar Solicitação
+                      <MessageCircle className="w-4 h-4 mr-2" />
+                      Enviar pelo WhatsApp
                     </Button>
-                    {formStatus.message && (
-                      <p className={`mt-4 text-center ${formStatus.success ? 'text-green-400' : 'text-red-400'}`}>
-                        {formStatus.message}
-                      </p>
-                    )}
                   </form>
                 </CardContent>
               </Card>
