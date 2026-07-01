@@ -51,7 +51,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault()
     const text = `Olá, Solar Machado! Gostaria de solicitar um orçamento.%0A%0A*Nome:* ${formData.name}%0A*E-mail:* ${formData.email}%0A*Telefone:* ${formData.phone}%0A*Mensagem:* ${formData.message}`
-    window.open(`https://wa.me/5586994688482?text=${text}`, '_blank')
+    window.open(`https://wa.me/5586981374037?text=${text}`, '_blank')
     setFormData({ name: '', email: '', phone: '', message: '' })
   }
 
@@ -60,7 +60,7 @@ function App() {
 
       {/* Botão flutuante WhatsApp */}
       <a
-        href="https://wa.me/5586994688482"
+        href="https://wa.me/5586981374037"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition-transform hover:scale-110"
@@ -131,7 +131,7 @@ function App() {
               Solicitar Orçamento
             </Button>
             <Button size="lg" className="bg-[#25D366] hover:bg-[#1DA851] text-white"
-              onClick={() => window.open('https://wa.me/5586994688482', '_blank')}>
+              onClick={() => window.open('https://wa.me/5586981374037', '_blank')}>
               <MessageCircle className="w-5 h-5 mr-2" />
               WhatsApp
             </Button>
@@ -481,10 +481,8 @@ function App() {
                 <div className="flex items-center">
                   <Phone className="w-6 h-6 mr-4 text-[#fdc300]" />
                   <div>
-                    <p className="font-semibold">Telefones</p>
-                    <p>(86) 99468-8482</p>
-                    <p>(86) 99818-3775</p>
-                    <p>(86) 99468-8487</p>
+                    <p className="font-semibold">Telefone</p>
+                    <p>(86) 98137-4037</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -549,11 +547,11 @@ function App() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Contato</h4>
               <div className="space-y-2 text-gray-400">
-                <p>(86) 99468-8482</p>
+                <p>(86) 98137-4037</p>
                 <p>solarmachadoeng@gmail.com</p>
                 <p>Teresina - PI</p>
                 <div className="flex items-center gap-4 mt-4">
-                  <a href="https://wa.me/5586994688482" target="_blank" rel="noopener noreferrer" className="text-[#25D366] hover:opacity-80 transition-opacity">
+                  <a href="https://wa.me/5586981374037" target="_blank" rel="noopener noreferrer" className="text-[#25D366] hover:opacity-80 transition-opacity">
                     <MessageCircle className="w-6 h-6" />
                   </a>
                   <a href="https://www.instagram.com/solarmachadoeng" target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:opacity-80 transition-opacity">
