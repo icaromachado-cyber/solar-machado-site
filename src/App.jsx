@@ -535,6 +535,7 @@ function App() {
             <div>
               <img src={logoImg} alt="Solar Machado" className="h-28 w-auto mb-4 brightness-0 invert" />
               <p className="text-gray-400">Especialistas em energia solar fotovoltaica, oferecendo soluções completas para residências e empresas em todo o Piauí.</p>
+              <p className="text-gray-500 text-sm mt-3">CNPJ: 34.757.760/0001-60</p>
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Serviços</h4>
