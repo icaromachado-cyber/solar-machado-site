@@ -198,24 +198,28 @@
 .sm .hero-copy { padding-bottom: clamp(3rem, 7vw, 6rem); }
 .sm .hero-copy p { margin-top: 1.75rem; max-width: 44ch; font-size: 1.2rem; color: #d8daf0; }
 .sm .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 2.25rem; }
-.sm .hero-art { position: relative; justify-self: center; width: min(100%, 440px); }
-.sm .hero-art::before { /* semicírculo-sol do logo */
-  content: ''; position: absolute; left: 50%; bottom: 0; width: 135%; aspect-ratio: 2/1;
-  transform: translateX(-50%); background: var(--sun); border-radius: 999px 999px 0 0;
-}
-.sm .hero-art img { position: relative; width: 78%; margin-inline: auto; aspect-ratio: 3/4; object-fit: cover; border-radius: 220px 220px 0 0; }
-.sm .hero-art figcaption { position: absolute; left: 0; bottom: 1.25rem; z-index: 1; background: var(--ink); color: #fff; font-size: .9rem; padding: .6rem .9rem; border-radius: 4px; }
 @media (min-width: 900px) {
   .sm .hero-in { grid-template-columns: 1.25fr 1fr; }
   .sm .hero-art { justify-self: end; width: 100%; }
 }
 @keyframes sm-rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
-@keyframes sm-sun { from { transform: translateX(-50%) translateY(60%); } to { transform: translateX(-50%); } }
 .sm .hero-copy > * { animation: sm-rise .8s cubic-bezier(.2,.7,.2,1) both; }
 .sm .hero-copy p { animation-delay: .15s; }
 .sm .hero-actions { animation-delay: .3s; }
-.sm .hero-art::before { animation: sm-sun 1.1s cubic-bezier(.2,.7,.2,1) both; }
-.sm .hero-art img { animation: sm-rise 1s .2s cubic-bezier(.2,.7,.2,1) both; }
+
+/* Hero: sol-logo + fotos em sequência */
+.sm .hero-art { position: relative; justify-self: center; width: min(100%, 440px); margin: 0; }
+.sm .hero-sun { position: absolute; left: 50%; top: -26.2%; width: 132.6%; transform: translateX(-50%); color: var(--sun); overflow: visible; pointer-events: none; }
+.sm .hero-slides { position: relative; width: 78%; margin-inline: auto; aspect-ratio: 3/4; border-radius: 220px 220px 0 0; overflow: hidden; background: var(--ink); }
+.sm .hero-slides img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: sm-slide 25s infinite; }
+.sm .hero-slides img:first-child { opacity: 1; }
+@keyframes sm-slide { 0% { opacity: 0; } 4% { opacity: 1; } 20% { opacity: 1; } 24% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes sm-sun { from { transform: translateX(-50%) scale(.8); opacity: 0; } to { transform: translateX(-50%) scale(1); opacity: 1; } }
+.sm .hero-sun { animation: sm-sun 1.1s cubic-bezier(.2,.7,.2,1) both; }
+.sm .hero-slides { animation: sm-rise 1s .2s cubic-bezier(.2,.7,.2,1) both; }
+@media (prefers-reduced-motion: reduce) { .sm .hero-slides img { animation: none !important; opacity: 0; } .sm .hero-slides img:first-child { opacity: 1; } }
+
+@media (min-width: 900px) { .sm .hero-art { justify-self: end; width: 100%; } }
 
 /* Faixa de números */
 .sm .facts { background: var(--sun); color: var(--ink); }

@@ -13,15 +13,21 @@ import './App.css'
 
 import logoImg from './assets/images/logo_header.png'
 import instalacao1 from './assets/images/instalacao_nova_1.jpg'
+import instalacao2 from './assets/images/instalacao_nova_2.jpg'
+import instalacao3 from './assets/images/instalacao_nova_3.jpg'
+import instalacao4 from './assets/images/instalacao_nova_4.jpg'
+import instalacao5 from './assets/images/instalacao_nova_5.jpg'
 import pAldebaran from './assets/images/projetos/aldebaran.jpg'
 import pDirceu from './assets/images/projetos/dirceu.jpg'
 import pLandri from './assets/images/projetos/landri.jpg'
 import pLuisCorreia from './assets/images/projetos/luis-correia.jpg'
-import pPalmeirais from './assets/images/projetos/palmeirais.jpg'
-import pCentroSul from './assets/images/projetos/centro-sul.jpg'
+import pIninga from './assets/images/projetos/ininga.jpg'
+import pRedonda from './assets/images/projetos/redonda.jpg'
 
 const WHATSAPP = 'https://wa.me/5586981374037'
 const INSTAGRAM = 'https://www.instagram.com/solarmachadoeng'
+
+const HERO_SLIDES = [instalacao1, instalacao2, instalacao3, instalacao4, instalacao5]
 
 const NAV = [
   ['#sobre', 'Sobre'],
@@ -62,9 +68,9 @@ const PLANS = [
     items: ['Linha de crédito solar', 'Taxas personalizadas para você', 'Aprovação rápida', 'Parcela menor que a conta de luz'],
   },
   {
-    title: 'Consórcio solar',
-    tag: 'Sem juros, sem entrada',
-    items: ['Apenas taxa administrativa', 'Parcelas a partir de R$ 500/mês', 'Ideal para planejar o futuro', 'Possibilidade de lance'],
+    title: 'Cartão de crédito',
+    tag: 'Em até 18 vezes',
+    items: ['Pagamento no cartão', 'Parcelamento em até 18 vezes', 'Sem precisar de financiamento', 'Fale com a gente para simular'],
   },
   {
     title: 'À vista',
@@ -74,7 +80,7 @@ const PLANS = [
 ]
 
 const WHY = [
-  { big: '95%', title: 'de economia', desc: 'Reduza drasticamente a sua conta de energia elétrica.' },
+  { big: '85%', title: 'de economia', desc: 'Reduza drasticamente a sua conta de energia elétrica.' },
   { big: '100%', title: 'sustentável', desc: 'Energia limpa e renovável, sem impacto ambiental.' },
   { big: '8%', title: 'de valorização', desc: 'Seu imóvel pode valer até 8% mais com energia solar.' },
   { big: '25', title: 'anos de garantia', desc: 'Aparelhos com até 25 anos de garantia.' },
@@ -85,8 +91,8 @@ const PROJECTS = [
   { img: pDirceu, title: 'Dirceu Arcoverde II, Teresina', desc: '1.300 kWh por mês' },
   { img: pLandri, title: 'Landri Sales, Piauí', desc: '2.000 kWh por mês' },
   { img: pLuisCorreia, title: 'Luís Correia, Piauí', desc: '1.500 kWh por mês' },
-  { img: pPalmeirais, title: 'Palmeirais, Piauí', desc: '1.500 kWh por mês' },
-  { img: pCentroSul, title: 'Centro Sul, Teresina', desc: '1.500 kWh por mês' },
+  { img: pIninga, title: 'Ininga, Teresina', desc: '1.500 kWh por mês' },
+  { img: pRedonda, title: 'Redonda, Teresina', desc: '1.000 kWh por mês' },
 ]
 
 function App() {
@@ -163,9 +169,13 @@ function App() {
                 </a>
               </div>
             </div>
-            <figure className="hero-art" style={{ margin: 0 }}>
-              <img src={instalacao1} alt="Painéis solares instalados sobre telhado colonial em Teresina" />
-              <figcaption>Residencial, Teresina</figcaption>
+            <figure className="hero-art">
+              <svg className="hero-sun" viewBox="-170 -170 340 190" aria-hidden="true" fill="currentColor"><rect x="-13" y="-165" width="26" height="53" rx="6" transform="rotate(-90)" /><rect x="-13" y="-165" width="26" height="53" rx="6" transform="rotate(-45)" /><rect x="-13" y="-165" width="26" height="53" rx="6" transform="rotate(0)" /><rect x="-13" y="-165" width="26" height="53" rx="6" transform="rotate(45)" /><rect x="-13" y="-165" width="26" height="53" rx="6" transform="rotate(90)" /></svg>
+              <div className="hero-slides">
+                {HERO_SLIDES.map((src, i) => (
+                  <img key={src} src={src} alt="Painéis solares instalados pela Solar Machado" style={{ animationDelay: `${i * 5}s` }} />
+                ))}
+              </div>
             </figure>
           </div>
         </section>
