@@ -32,7 +32,7 @@ const SERVICES = [
   {
     title: 'Instalação residencial',
     desc: 'Sistemas fotovoltaicos para a sua casa, com economia na conta de luz desde o primeiro mês.',
-    items: ['Projeto personalizado', 'Instalação profissional', 'Homologação na concessionária', 'Garantia de 25 anos'],
+    items: ['Projeto personalizado', 'Instalação profissional', 'Homologação na concessionária', 'Aparelhos com até 25 anos de garantia'],
   },
   {
     title: 'Instalação comercial',
@@ -42,7 +42,7 @@ const SERVICES = [
   {
     title: 'Manutenção',
     desc: 'Preventiva e corretiva, para o sistema render o máximo todos os dias.',
-    items: ['Limpeza dos painéis', 'Monitoramento remoto', 'Inspeções técnicas', 'Suporte técnico'],
+    items: ['Limpeza dos painéis', 'Monitoramento remoto', 'Inspeções técnicas', 'Suporte técnico diário'],
   },
 ]
 
@@ -56,13 +56,13 @@ const STEPS = [
 const PLANS = [
   {
     title: 'Financiamento bancário',
-    tag: 'Até 60 parcelas',
-    items: ['Linha de crédito solar', 'Taxas a partir de 0,99% ao mês', 'Aprovação rápida', 'Parcela menor que a conta de luz'],
+    tag: 'Até 84 parcelas',
+    items: ['Linha de crédito solar', 'Taxas personalizadas para você', 'Aprovação rápida', 'Parcela menor que a conta de luz'],
   },
   {
     title: 'Consórcio solar',
     tag: 'Sem juros, sem entrada',
-    items: ['Apenas taxa administrativa', 'Parcelas a partir de R$ 200/mês', 'Ideal para planejar o futuro', 'Possibilidade de lance'],
+    items: ['Apenas taxa administrativa', 'Parcelas a partir de R$ 500/mês', 'Ideal para planejar o futuro', 'Possibilidade de lance'],
   },
   {
     title: 'À vista',
@@ -75,7 +75,7 @@ const WHY = [
   { big: '95%', title: 'de economia', desc: 'Reduza drasticamente a sua conta de energia elétrica.' },
   { big: '100%', title: 'sustentável', desc: 'Energia limpa e renovável, sem impacto ambiental.' },
   { big: '8%', title: 'de valorização', desc: 'Seu imóvel pode valer até 8% mais com energia solar.' },
-  { big: '25', title: 'anos de garantia', desc: 'Investimento seguro, com garantia estendida.' },
+  { big: '25', title: 'anos de garantia', desc: 'Aparelhos com até 25 anos de garantia.' },
 ]
 
 const PROJECTS = [
@@ -151,7 +151,7 @@ function App() {
               </h1>
               <p>
                 Projetamos, instalamos e homologamos sistemas fotovoltaicos para casas,
-                empresas e indústrias em Teresina e em todo o Piauí.
+                empresas e indústrias no Piauí, Maranhão e Ceará.
               </p>
               <div className="hero-actions">
                 <a href="#contato" className="btn btn-sun">Pedir orçamento grátis</a>
@@ -170,9 +170,9 @@ function App() {
         {/* Números */}
         <section className="facts" aria-label="Solar Machado em números">
           <div className="wrap facts-in">
-            <div className="fact"><strong>6+ anos</strong><span>de experiência, desde 2019</span></div>
+            <div className="fact"><strong>7+ anos</strong><span>de experiência, desde 2019</span></div>
             <div className="fact"><strong>500+</strong><span>projetos realizados</span></div>
-            <div className="fact"><strong>25 anos</strong><span>de garantia</span></div>
+            <div className="fact"><strong>Até 25 anos</strong><span>de garantia nos aparelhos</span></div>
           </div>
         </section>
 
@@ -182,8 +182,8 @@ function App() {
             <h2 className="h2"><b>Engenharia solar</b> feita no Piauí, para o clima do Piauí.</h2>
             <div className="about-text">
               <p>
-                A Solar Machado foi fundada em 2019 e é especializada em instalação e
-                manutenção de sistemas de energia solar fotovoltaica. Nossa equipe técnica
+                A Solar Machado foi fundada em 2019 e é especializada em projetos,
+                instalação e manutenção de sistemas de energia solar fotovoltaica. Nossa equipe técnica
                 qualificada entrega projetos seguros, eficientes e com a máxima economia.
               </p>
               <ul className="checks">
@@ -346,7 +346,7 @@ function App() {
           <div className="foot-in">
             <div>
               <img src={logoImg} alt="Solar Machado" />
-              <p>Especialistas em energia solar fotovoltaica, com soluções completas para residências e empresas em todo o Piauí.</p>
+              <p>Especialistas em energia solar fotovoltaica, com soluções completas para residências e empresas no Piauí, Maranhão e Ceará.</p>
               <p style={{ marginTop: '.75rem', fontSize: '.875rem' }}>CNPJ: 34.757.760/0001-60</p>
             </div>
             <div>
