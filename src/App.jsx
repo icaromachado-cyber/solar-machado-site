@@ -13,10 +13,12 @@ import './App.css'
 
 import logoImg from './assets/images/logo_header.png'
 import instalacao1 from './assets/images/instalacao_nova_1.jpg'
-import instalacao2 from './assets/images/instalacao_nova_2.jpg'
-import instalacao3 from './assets/images/instalacao_nova_3.jpg'
-import instalacao4 from './assets/images/instalacao_nova_4.jpg'
-import instalacao5 from './assets/images/instalacao_nova_5.jpg'
+import pAldebaran from './assets/images/projetos/aldebaran.jpg'
+import pDirceu from './assets/images/projetos/dirceu.jpg'
+import pLandri from './assets/images/projetos/landri.jpg'
+import pLuisCorreia from './assets/images/projetos/luis-correia.jpg'
+import pPalmeirais from './assets/images/projetos/palmeirais.jpg'
+import pCentroSul from './assets/images/projetos/centro-sul.jpg'
 
 const WHATSAPP = 'https://wa.me/5586981374037'
 const INSTAGRAM = 'https://www.instagram.com/solarmachadoeng'
@@ -79,11 +81,12 @@ const WHY = [
 ]
 
 const PROJECTS = [
-  { img: instalacao1, title: 'Residencial, Teresina', desc: 'Sistema de 5 kWp. Economia de 90%.', cls: 'tall' },
-  { img: instalacao2, title: 'Comercial, Parnaíba', desc: 'Sistema de 15 kWp. Retorno em 4 anos.', cls: 'wide' },
-  { img: instalacao3, title: 'Industrial, Picos', desc: 'Sistema de 50 kWp. Economia de R$ 8.000 por mês.', cls: '' },
-  { img: instalacao4, title: 'Residencial, Teresina', desc: 'Sistema de 10 kWp. Economia de 95%.', cls: '' },
-  { img: instalacao5, title: 'Comercial, Teresina', desc: 'Sistema de 20 kWp. Redução de custos.', cls: '' },
+  { img: pAldebaran, title: 'Aldebaran Leste, Teresina', desc: '900 kWh por mês' },
+  { img: pDirceu, title: 'Dirceu Arcoverde II, Teresina', desc: '1.300 kWh por mês' },
+  { img: pLandri, title: 'Landri Sales, Piauí', desc: '2.000 kWh por mês' },
+  { img: pLuisCorreia, title: 'Luís Correia, Piauí', desc: '1.500 kWh por mês' },
+  { img: pPalmeirais, title: 'Palmeirais, Piauí', desc: '1.500 kWh por mês' },
+  { img: pCentroSul, title: 'Centro Sul, Teresina', desc: '1.500 kWh por mês' },
 ]
 
 function App() {
@@ -273,7 +276,7 @@ function App() {
             <p className="lead">Alguns dos sistemas que instalamos pelo Piauí.</p>
             <div className="work">
               {PROJECTS.map((p) => (
-                <figure key={p.title + p.desc} className={`proj ${p.cls}`} style={{ margin: 0 }}>
+                <figure key={p.title + p.desc} className="proj" style={{ margin: 0 }}>
                   <div className="pic"><img src={p.img} alt={`${p.title}: ${p.desc}`} loading="lazy" /></div>
                   <figcaption>
                     <h3>{p.title}</h3>
